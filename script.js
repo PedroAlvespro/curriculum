@@ -22,6 +22,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 0.2 MOBILE MENU TOGGLE
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navLinksContainer = document.getElementById('nav-links');
+    if (mobileBtn && navLinksContainer) {
+        mobileBtn.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+            const icon = mobileBtn.querySelector('i');
+            if (navLinksContainer.classList.contains('active')) {
+                icon.classList.replace('ph-list', 'ph-x');
+            } else {
+                icon.classList.replace('ph-x', 'ph-list');
+            }
+        });
+
+        // Fechar menu ao clicar em um link
+        navLinksContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                if (icon && icon.classList.contains('ph-x')) {
+                    icon.classList.replace('ph-x', 'ph-list');
+                }
+            });
+        });
+    }
+
     // 1. GERADOR DE ESTRELAS NO BACKGROUND
     const starsContainer = document.querySelector('.stars');
     const numStars = 100;
