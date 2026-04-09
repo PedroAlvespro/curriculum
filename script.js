@@ -85,30 +85,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const shootingStarsContainer = document.querySelector('.shooting-stars');
     
     function spawnShootingStar() {
+        // Só renderizar se a página não estiver inativa ou se o usuário não pediu (Opcional)
         const star = document.createElement('div');
         star.classList.add('shooting-star');
         
-        // Começa em algum lugar no topo ou esquerda
-        const startX = Math.random() * 100;
+        // Começa em algum lugar no topo fora da tela
+        const startX = Math.random() * 150; // Para garantir que cruza a tela toda
         star.style.left = `${startX}vw`;
-        star.style.top = `-10vh`;
+        star.style.top = `-20vh`;
         
         shootingStarsContainer.appendChild(star);
         
-        // Remove a estrela após a animação
+        // Remove a estrela após 1.5s (duração da animação CSS)
         setTimeout(() => {
             star.remove();
-        }, 4000);
+        }, 1500);
     }
 
-    // Spawna estrela cadente de vez em quando (entre 3s e 8s)
+    // Spawna estrela cadente com bastante frequência (entre 1s e 5s)
     function randomShootingStarInterval() {
         spawnShootingStar();
-        const nextTime = Math.random() * 5000 + 3000;
+        const nextTime = Math.random() * 4000 + 1000;
         setTimeout(randomShootingStarInterval, nextTime);
     }
     
-    setTimeout(randomShootingStarInterval, 2000);
+    setTimeout(randomShootingStarInterval, 1000);
 
     // 3. SCROLL REVEAL (INTERSECTION OBSERVER)
     const revealElements = document.querySelectorAll('.reveal');

@@ -98,18 +98,22 @@ body {
 /* Shooting Stars */
 .shooting-star {
     position: absolute;
-    width: 2px;
-    height: 80px;
-    background: linear-gradient(to bottom, rgba(255,255,255,1), transparent);
+    width: 3px;
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 255, 204, 0.5), transparent);
     border-radius: 50%;
     transform: rotate(45deg);
     opacity: 0;
-    animation: shooting 4s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.8));
+    animation: shooting 1.5s ease-in forwards;
+    pointer-events: none;
+    z-index: 2;
 }
 
 @keyframes shooting {
     0% { transform: rotate(45deg) translateY(-200px); opacity: 1; }
-    5%, 100% { transform: rotate(45deg) translateY(100vh); opacity: 0; }
+    80% { opacity: 1; }
+    100% { transform: rotate(45deg) translateY(120vh); opacity: 0; }
 }
 
 /* ==========================================================================
