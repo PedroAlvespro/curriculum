@@ -171,9 +171,7 @@ body {
     box-shadow: 0 12px 40px rgba(0, 255, 204, 0.1);
 }
 
-/* ==========================================================================
-   NAVBAR
-   ========================================================================== */
+/* Navbar and Menu Styles */
 .navbar {
     position: fixed;
     top: 20px;
@@ -182,6 +180,10 @@ body {
     z-index: 100;
     padding: 10px 30px;
     border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
 }
 
 .navbar .nav-links {
@@ -214,38 +216,64 @@ body {
     color: var(--accent-primary);
 }
 
+.toggle-btn {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    border-radius: 50%;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.3s;
+    margin-left: 20px;
+}
+
+.toggle-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+/* Modal/Dropdown para Mobile */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%;
-        border-radius: 25px;
-        padding: 15px 20px;
+        width: 100%;
+        max-width: 90%;
+        padding: 15px 25px;
+        border-radius: 20px;
+        top: 15px;
     }
+    
     .mobile-menu-btn {
         display: block;
     }
+
     .navbar .nav-links {
         display: none;
         flex-direction: column;
+        align-items: flex-start;
         position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
+        top: 80px;
+        right: 0;
+        width: 250px;
         background: var(--glass-bg);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--glass-border);
-        border-radius: 20px;
+        border-radius: 16px;
         padding: 20px;
-        text-align: center;
-        gap: 20px;
+        gap: 15px;
         box-shadow: var(--glass-glow);
     }
+
     .navbar .nav-links.active {
         display: flex;
-        animation: fadeInDown 0.3s ease;
+        animation: fadeInRight 0.3s ease;
     }
-    @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
     }
 }
 
@@ -760,27 +788,18 @@ body.theme-dark {
     --glass-glow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Theme Toggle Configs */
+body.theme-dark .aurora {
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
-
-.toggle-btn {
-    background: transparent;
-    border: 1px solid var(--glass-border);
-    color: var(--text-primary);
-    border-radius: 50%;
-    width: 40px; height: 40px;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; transition: all 0.3s;
-    margin-left: 20px;
+body.theme-aurora .aurora {
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
-.toggle-btn:hover {
-    border-color: var(--accent-primary);
-    color: var(--accent-primary);
-    transform: rotate(15deg) scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+body.theme-dark {
+    --glass-bg: rgba(10, 15, 20, 0.7);
+    --glass-glow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Intro Screen */
