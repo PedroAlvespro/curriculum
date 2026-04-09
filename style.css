@@ -184,7 +184,7 @@ body {
     border-radius: 50px;
 }
 
-.navbar ul {
+.navbar .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -223,7 +223,7 @@ body {
     .mobile-menu-btn {
         display: block;
     }
-    .nav-links {
+    .navbar .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -239,7 +239,7 @@ body {
         gap: 20px;
         box-shadow: var(--glass-glow);
     }
-    .nav-links.active {
+    .navbar .nav-links.active {
         display: flex;
         animation: fadeInDown 0.3s ease;
     }
