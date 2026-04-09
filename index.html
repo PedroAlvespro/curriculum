@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Pedro Alves Fernandes | Portfólio</title>
+    <meta name="description" content="Desenvolvedor Back-End C# | .NET Developer. Portfólio e currículo online de Antonio Pedro Alves Fernandes.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Devicon and Phosphor -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-aurora">
+    <!-- Tela de Intro -->
+    <div id="intro-screen">
+        <div class="intro-loader">
+            <i class="ph ph-circle-notch spinner"></i>
+            <span class="code-font glitch-text-small" data-text="> Carregando recursos...">> Carregando recursos...</span>
+        </div>
+    </div>
+    <!-- Background Animado -->
+    <div class="bg-animation">
+        <canvas id="particles-canvas"></canvas>
+        <div class="stars"></div>
+        <div class="aurora"></div>
+        <div class="shooting-stars"></div>
+    </div>
+
+    <!-- Navegação (Opcional, mas útil para o Scroll) -->
+    <nav class="navbar glass content-hidden">
+        <ul class="nav-links">
+            <li><a href="#header">Início</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#educacao">Educação</a></li>
+        </ul>
+        <button id="theme-toggle" class="toggle-btn" title="Alternar Tema">
+            <i class="ph ph-magic-wand"></i>
+        </button>
+    </nav>
+
+    <main class="container content-hidden">
+        
+        <!-- HEADER -->
+        <header id="header" class="section reveal">
+            <div class="header-content glass-card glowing">
+                <div class="profile-tagline">
+                    <span class="code-font">&gt; Olá, mundo. Eu sou</span>
+                </div>
+                <h1 class="glitch-text" data-text="Antonio Pedro Alves Fernandes">Antonio Pedro Alves Fernandes</h1>
+                <h2 class="role typed-text">Desenvolvedor Back-End C# | .NET Developer</h2>
+                
+                <p class="description">
+                    Desenvolvedor Full Stack com foco em Back-End na linguagem C#, com mais de 2 anos de experiência. Entusiasta da tecnologia, apaixonado por criar soluções eficientes, escaláveis e com boas práticas de desenvolvimento.
+                </p>
+                
+                <div class="actions">
+                    <a href="https://github.com/pedroalvespro" target="_blank" class="btn primary-btn glass">
+                        <i class="ph ph-github-logo"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/pedro-alves-dev" target="_blank" class="btn primary-btn glass">
+                        <i class="ph ph-linkedin-logo"></i> LinkedIn
+                    </a>
+                    <a href="mailto:antoniopedro9778@gmail.com" class="btn secondary-btn glass">
+                        <i class="ph ph-envelope-simple"></i> Email
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="section reveal">
+            <h2 class="section-title"><i class="ph ph-brain"></i> Sobre Mim</h2>
+            <div class="glass-card about-grid">
+                <div class="about-item">
+                    <i class="ph ph-code-block about-icon"></i>
+                    <p>Forte experiência com desenvolvimento <strong>backend em C#</strong>, projetando e mantendo APIs robustas.</p>
+                </div>
+                <div class="about-item">
+                    <i class="ph ph-shield-check about-icon"></i>
+                    <p>Foco incessante em <strong>qualidade de código, boas práticas</strong> e eficiência operacional.</p>
+                </div>
+                <div class="about-item">
+                    <i class="ph ph-users-three about-icon"></i>
+                    <p>Valorizo o <strong>trabalho em equipe</strong> e o aprendizado contínuo para acompanhar as inovações.</p>
+                </div>
+                <div class="about-item">
+                    <i class="ph ph-tree-structure about-icon"></i>
+                    <p>Grande interesse em <strong>arquitetura de software</strong> e desenvolvimento de soluções escaláveis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="section reveal">
+            <h2 class="section-title"><i class="ph ph-wrench"></i> Habilidades Técnicas</h2>
+            
+            <div class="skills-container">
+                <!-- Back-End -->
+                <div class="skill-category glass-card">
+                    <h3><i class="ph ph-server"></i> Back-End</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-csharp-plain"></i> C#</span>
+                        <span class="skill-tag"><i class="devicon-dot-net-plain"></i> .NET</span>
+                        <span class="skill-tag"><i class="devicon-dotnetcore-plain"></i> ASP.NET Core</span>
+                        <span class="skill-tag"><i class="devicon-sqldeveloper-plain"></i> Entity Framework</span>
+                        <span class="skill-tag"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Front-End -->
+                <div class="skill-category glass-card">
+                    <h3><i class="ph ph-desktop"></i> Front-End</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-blazor-original"></i> Blazor</span>
+                        <span class="skill-tag"><i class="devicon-react-original"></i> React</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="skill-category glass-card">
+                    <h3><i class="ph ph-rocket"></i> DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-azure-plain"></i> Azure DevOps</span>
+                        <span class="skill-tag"><i class="devicon-docker-plain"></i> Docker</span>
+                        <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="skill-category glass-card">
+                    <h3><i class="ph ph-device-mobile"></i> Mobile</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-dotnetcore-plain"></i> .NET MAUI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia" class="section reveal">
+            <h2 class="section-title"><i class="ph ph-briefcase"></i> Experiência Profissional</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date code-font">03/2025 – Atual</span>
+                        <h3 class="timeline-role">Desenvolvedor .NET Full Stack</h3>
+                        <h4 class="timeline-company">Freelancer (Remoto)</h4>
+                        <ul class="timeline-tasks">
+                            <li>Desenvolvimento de sistema MasterCare para prefeituras.</li>
+                            <li>Modelagem de domínio e arquitetura.</li>
+                            <li>Integração de serviços com APIs legadas.</li>
+                            <li>Desenvolvimento de aplicações web utilizando ASP.NET.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date code-font">08/2024 – Atual</span>
+                        <h3 class="timeline-role">Desenvolvedor Back-End Júnior</h3>
+                        <h4 class="timeline-company">Trimap Sistemas e Serviços (Remoto)</h4>
+                        <ul class="timeline-tasks">
+                            <li>Refatoração de sistema de notas fiscais com foco em segurança e qualidade de código.</li>
+                            <li>Reescrita de partes de sistema legado empregando TDD (Test-Driven Development).</li>
+                            <li>Desenvolvimento de aplicações mobile cross-platform com .NET MAUI.</li>
+                            <li>Projeto de APIs robustas e interfaces de integração.</li>
+                            <li>Aplicação de DDD (Domain-Driven Design) e Clean Architecture para manutenibilidade.</li>
+                            <li>Participação ativa em code review e análise de Pull Requests.</li>
+                            <li>Atuação estratégica no sistema NFE 2026 seguindo rigorosos padrões federais.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCAÇÃO & IDIOMAS -->
+        <div class="edu-lang-wrapper">
+            <section id="educacao" class="section reveal flex-1">
+                <h2 class="section-title"><i class="ph ph-graduation-cap"></i> Educação</h2>
+                <div class="cards-stack">
+                    <div class="glass-card edu-card">
+                        <div class="edu-header">
+                            <h3>Bacharelado em Sistemas de Informação</h3>
+                            <span class="edu-date code-font">2023 – 2026</span>
+                        </div>
+                        <p class="edu-school">Universidade Federal do Ceará (UFC)</p>
+                        <span class="edu-status badge">Em andamento</span>
+                    </div>
+
+                    <div class="glass-card edu-card">
+                        <div class="edu-header">
+                            <h3>Técnico em Informática</h3>
+                            <span class="edu-date code-font">2020 – 2022</span>
+                        </div>
+                        <p class="edu-school">Secretaria de Educação do Ceará</p>
+                        <span class="edu-status badge completed">Concluído</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="idiomas" class="section reveal flex-1">
+                <h2 class="section-title"><i class="ph ph-translate"></i> Idiomas</h2>
+                <div class="glass-card lang-card">
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name">Português</span>
+                            <span class="lang-level">Nativo</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name">Inglês</span>
+                            <span class="lang-level">Intermediário</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+
+    <footer class="glass footer">
+        <div class="footer-links">
+            <a href="https://github.com/pedroalvespro" target="_blank" title="GitHub"><i class="ph ph-github-logo"></i></a>
+            <a href="https://linkedin.com/in/pedro-alves-dev" target="_blank" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="mailto:antoniopedro9778@gmail.com" title="Email"><i class="ph ph-envelope-simple"></i></a>
+        </div>
+        <p class="code-font"><small>&copy; 2024 - 2026 Antonio Pedro Alves Fernandes. Feito com código e café.</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
